@@ -4,27 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.learning</groupId>
-        <artifactId>rabbitmq_vs_kafka</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-
     <groupId>com.learning</groupId>
-    <artifactId>rabbitmq</artifactId>
+    <artifactId>rabbitmq_vs_kafka</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>rabbitmq</module>
+    </modules>
 
     <properties>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.rabbitmq</groupId>
-            <artifactId>amqp-client</artifactId>
-            <version>5.7.3</version>
-        </dependency>
-    </dependencies>
 
 </project>
