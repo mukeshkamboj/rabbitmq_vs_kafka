@@ -1,0 +1,45 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/**/node_modules
+/**/package-lock.json
+
+# testing
+/**/coverage
+/**/__snapshots__
+# build
+/**/build
+
+# temp
+*.swp
+
+# misc
+.DS_Store
+
+/**/npm-debug.log*
+/**/*-result.xml
+/**/test-results.json
+
+.idea
+*.iml
+
+# vs code
+.project
+/**/bin/
+.vscode/
+
+# #build files
+/**/target/
+/**/dist/
+
+.settings/
+.classpath
+.factorypath
+
+#temp
+frontend-prev/
+/.vs
+/frontend/.vs
+/frontend/obj/Debug
+/frontend/NodejsAppForVS.njsproj
+/frontend/NodejsAppForVS.sln
