@@ -12,4 +12,4 @@ docker-compose up --build
 ```
 #### To access the RabbitMQ admin management tool. Access the URL localhost:15672. Username and Password is guest
 #### To stop the docker container: CTL + C
-
+#### Follow the README.md file in kafka module to setup the topics. 

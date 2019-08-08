@@ -9,6 +9,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import static com.rabbitmq.client.BuiltinExchangeType.TOPIC;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 /*
 Publisher publishes the message on exchange and queues bind to the exchange receive the copy of message with associated routing keys.
@@ -41,7 +42,6 @@ public class PublishSubscribeRoutingKeysMultipleCriteria {
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            System.out.println("========================================================================================================");
         }
     }
 
@@ -57,7 +57,7 @@ public class PublishSubscribeRoutingKeysMultipleCriteria {
                 channel.queueBind(queue, EXCHANGE_NAME, key);
             }
             DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-                String message = new String(delivery.getBody(), "UTF-8");
+                String message = new String(delivery.getBody(), UTF_8);
                 System.out.println(consumerName + " received '" + message + "'" + " for " + delivery.getEnvelope().getRoutingKey());
             };
             channel.basicConsume(queue, true, deliverCallback, consumerTag -> {
